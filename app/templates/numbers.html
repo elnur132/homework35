@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load custom_filters %}
+    <a href="{% url 'create' %}">Add</a>
+    {% for n in numbers %}
+        <p>{{ n.number }} * 2 = {{ n.number| replace_comma }} </p>
+    {% endfor %}
+</body>
+</html>
